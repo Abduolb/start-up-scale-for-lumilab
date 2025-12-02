@@ -376,132 +376,35 @@
             }
         }
 
-        @media/* ---  Mobile Responsiveness --- */
-(max-width: 768px) {
-
-    
-    nav {
-        padding: 12px 18px;
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .logo-text {
-        font-size: 15px;
-    }
-
-    .social-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .social-links span {
-        display: block;
-        margin-top: 5px;
-    }
-
-    
-    .hero {
-        padding: 50px 15px 70px;
-    }
-
-    .program-logo {
-        max-width: 220px;
-    }
-
-    .hero-description {
-        font-size: 1em;
-        padding: 0 10px;
-        line-height: 1.6;
-    }
-
-    .cta-button {
-        font-size: 1em;
-        padding: 14px 35px;
-    }
-
-
-    .section-title {
-        font-size: 1.6em;
-        margin-bottom: 30px;
-    }
-
-    
-    .objectives-grid,
-    .components-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    
-    .objective-card,
-    .component-card {
-        padding: 25px;
-    }
-
-    
-    .outcomes-list li {
-        padding: 20px 20px 20px 45px;
-        font-size: 0.95em;
-    }
-
-    
-    .form-container {
-        padding: 20px;
-    }
-
-    #google-form-embed {
-        min-height: 650px;
-    }
-
-    
-    footer {
-        padding: 30px 15px;
-        font-size: 0.9em;
-    }
-}
-
-
-@media (max-width: 480px) {
-
-    .logo-text {
-        font-size: 20px;
-    }
-
-    .hero-description {
-        font-size: 0.95em;
-    }
-
-    .cta-button {
-        width: 100%;
-        padding: 14px 0;
-        font-size: 1em;
-    }
-
-    .section-title {
-        font-size: 1.4em;
-    }
-
-    .outcomes-list li {
-        font-size: 0.9em;
-    }
-}
-
-            
-
-            .logo-text {
-                font-size: 26px;
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            nav {
+                padding: 12px 18px;
+                flex-direction: row; /* Normal order - logo left, social right */
+                gap: 10px;
             }
 
-            .butterfly-icon {
-                width: 30px;
-                height: 30px;
+            .logo-container {
+                justify-content: flex-start;
+            }
+
+            .logo-container img {
+                max-width: 100px;
+                height: auto;
+            }
+
+            .logo-text {
+                font-size: 15px;
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                gap: 8px;
             }
 
             .social-links span {
-                font-size: 16px;
+                display: none; /* Hide "Lumilabhub" text on mobile for cleaner look */
             }
 
             .social-icon {
@@ -510,31 +413,88 @@
             }
 
             .hero {
-                padding: 60px 20px 80px;
+                padding: 50px 15px 70px;
             }
 
             .program-logo {
-                max-width: 280px;
+                max-width: 220px;
             }
 
             .hero-description {
-                font-size: 1.15em;
+                font-size: 1em;
+                padding: 0 10px;
+                line-height: 1.6;
+            }
+
+            .cta-button {
+                font-size: 1em;
+                padding: 14px 35px;
             }
 
             .section-title {
-                font-size: 2em;
+                font-size: 1.6em;
+                margin-bottom: 30px;
             }
 
-            .objectives, .components, .outcomes, .apply-section {
-                padding: 60px 20px;
+            .objectives-grid,
+            .components-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
-        
+
+            .objective-card,
+            .component-card {
+                padding: 25px;
+            }
+
+            .outcomes-list li {
+                padding: 20px 20px 20px 45px;
+                font-size: 0.95em;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+
+            #google-form-embed {
+                min-height: 650px;
+            }
+
+            footer {
+                padding: 30px 15px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-text {
+                font-size: 20px;
+            }
+
+            .hero-description {
+                font-size: 0.95em;
+            }
+
+            .cta-button {
+                width: 100%;
+                padding: 14px 0;
+                font-size: 1em;
+            }
+
+            .section-title {
+                font-size: 1.4em;
+            }
+
+            .outcomes-list li {
+                font-size: 0.9em;
+            }
+        }
     </style>
 </head>
 <body>
     <nav>
         <div class="logo-container">
-             <img src="/lumilab logo.jpg" alt="">
+             <img src="/lumilab logo.jpg" alt="Lumilab Logo">
             <span class="logo-text"></span>
         </div>
         <div class="social-links">
@@ -565,9 +525,7 @@
     <section class="hero">
         <div class="hero-content">
             <div class="program-logo">
-                <svg viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
-                    <img src="/start_up_logo-removebg-preview.png" alt="">                  
-                </svg>
+                <img src="/start_up_logo-removebg-preview.png" alt="Start-Up Scale Logo">                  
             </div>
             
             <p class="hero-description">
@@ -662,15 +620,11 @@
         </div>
     </section>
 
-    </section>
-
     <footer>
-       
         <p class="footer-website">www.Lumilab.com.ng</p>
     </footer>
 
     <script>
-        
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -684,28 +638,6 @@
             });
         });
 
-        
-        function embedForm() {
-            const input = document.getElementById('form-link-input');
-            const link = input.value.trim();
-            
-            if (link) {
-                const placeholder = document.querySelector('.form-placeholder');
-                const iframe = document.createElement('iframe');
-                iframe.id = 'google-form-embed';
-                iframe.src = link;
-                iframe.style.width = '100%';
-                iframe.style.minHeight = '800px';
-                iframe.style.border = 'none';
-                iframe.style.borderRadius = '10px';
-                
-                placeholder.parentNode.replaceChild(iframe, placeholder);
-            } else {
-                alert('Please paste a Google Form link');
-            }
-        }
-
-        
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
